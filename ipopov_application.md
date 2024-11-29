@@ -51,7 +51,7 @@
 
 **[ ИНСТРУМЕНТЫ РАЗРАБОТКИ, ИНФОРМАЦИЯ О БД ]**
 
-* JavaScript/ HTML / CSS/TypeScript /React - для разработки веб-версии
+* JavaScript/ HTML / CSS/TypeScript /React - для разработки веб-приложения
 
   
 **[ ЭТАПЫ РАЗРАБОТКИ ]**
