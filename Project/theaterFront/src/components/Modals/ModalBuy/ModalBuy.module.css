@@ -1,0 +1,68 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:100;
+    color: black;
+    opacity: 0;
+    animation: fadeInBackground 0.5s forwards;
+}
+
+.modal {
+    background-color: #d6d6d6;
+    min-width: 55%;
+    height: 75%;
+    z-index: 100;
+    display: flex;
+    cursor: pointer;
+    color: black;
+    flex-direction: column;
+    transform: scale(0.5) translateY(-20px);
+    opacity: 0;
+    animation: fadeInModal 0.5s forwards;
+}
+@keyframes fadeInBackground {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInModal {
+    from {
+        transform: scale(0.9) translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+.rotate {
+    display: inline-block;
+    transition: transform 0.5s ease-in-out;
+}
+
+.rotate:hover {
+    transform: rotate(90deg);
+    z-index: 1;
+}
+
+.mouseOut {
+    transform: rotate(-90deg);
+    z-index: 0;
+}
+.btw{
+    padding: 12px;
+    background-color: #1B65F5;
+    color:white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.btw:hover{
+    background-color: #195bda;
+}

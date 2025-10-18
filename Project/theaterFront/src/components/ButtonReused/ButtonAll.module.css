@@ -1,0 +1,33 @@
+@media (max-width: 500px) {
+    .button {
+        padding: calc(0.4rem + 1vw);
+        font-size: calc(0.8rem + 0.5vw);
+        max-width: 100%;
+    }
+}
+
+
+.quantityControls {
+    display: flex;
+    align-items: center;
+    margin-right: 1.25rem;
+}
+
+.quantity {
+    margin: 0 0.625rem;
+    font-size: calc(1vw + 0.5vh);
+}
+.quantityControls button {
+    width: calc(2vw + 2vh);
+    height: calc(2vw + 2vh);
+    font-size: calc(1vw + 0.5vh);
+    border: none;
+    background-color: #001b22;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.quantityControls button:hover {
+    background-color: #012733;
+}

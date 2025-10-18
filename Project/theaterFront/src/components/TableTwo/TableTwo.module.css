@@ -1,0 +1,166 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+.modalContent {
+    background-color: #3c3b3b;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80vw;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-20px);
+    animation: slideIn 0.3s forwards;
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.closeButton {
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.closeButton:hover {
+    color: #ff4d4d;
+}
+
+.tableContainer {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #333;
+    color: #fff;
+}
+
+.dataTable th,
+.dataTable td {
+    border: 1px solid #555;
+    padding: 8px;
+    text-align: center;
+}
+
+.dataTable th {
+    background-color: #444;
+    font-weight: bold;
+}
+
+.dataTable tbody tr:nth-child(even) {
+    background-color: #2c2c2e;
+}
+
+.negative {
+    color: #ff4d4d;
+}
+
+.btwIndicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #EEE;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btwIndicator:hover{
+    background-color: #474646;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.dashboard {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.tableContainer {
+    border: 1px solid #f05454;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tableContainer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f05454;
+}
+
+.section h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+th,
+td {
+    border: 1px solid #555;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #2a2a2a;
+}
+
+td {
+    background-color: #1e1e1e;
+}
+
+tr:nth-child(even) td {
+    background-color: #292929;
+}
+
+tr td:last-child {
+    color: #f05454;
+    font-weight: bold;
+}
+.h2Color:hover {
+    color: #EEE
+}

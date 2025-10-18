@@ -1,0 +1,55 @@
+.tableResponsive {
+    max-height: 70vh;
+    overflow-y: auto;
+    overflow-x: auto;
+    margin: 20px 0;
+    border: 1px solid #555;
+}
+
+.dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #0e0e0e;
+    table-layout: fixed;
+}
+
+.dataTable th,
+.dataTable td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #555;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.dataTable th {
+    background-color: #1c1c1e;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.dataTable tr:hover {
+    background-color: #292929;
+}
+
+.dataTable .negative {
+    color: #ff4d4d;
+}
+
+.tdST {
+    max-width: 100px;
+}
+
+.inputField {
+    width: 80px;
+    max-width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.dataTable td .inputField {
+    width: 80px;
+}

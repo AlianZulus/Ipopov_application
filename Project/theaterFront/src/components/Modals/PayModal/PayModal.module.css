@@ -1,0 +1,68 @@
+.modalContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.error {
+    margin-top: 0;
+    color: red;
+    font-size: 12px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.expiryCvcContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expiryContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+}
+
+.cvcContainer {
+    width: 30%;
+}
+
+.payButton {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #1B65F5;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.payButton:hover {
+    background-color: #195bda;
+}
+.payButton:disabled {
+    background-color: #818283;
+    color: #EEE;
+    cursor: not-allowed;
+}
+
+.containerInput {
+    margin-top: 10px;
+    border: none;
+}
+
+.inputStyle {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}

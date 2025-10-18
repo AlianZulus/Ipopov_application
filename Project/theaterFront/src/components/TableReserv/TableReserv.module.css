@@ -1,0 +1,50 @@
+.modalOverlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.modalContent {
+
+    border-radius: 10px;
+    width: 990px;
+    text-align: center;
+
+    position: relative;
+}
+
+.restaurantHall {
+    position: relative;
+    width: 900px;
+    height: 600px;
+
+    background-color: #34353a;
+}
+
+.tableLabel {
+    position: absolute;
+    top: 50%;  left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-weight: bold;
+    pointer-events: none;
+}
+.btw {
+    background-color: #001b22;
+    font-family: 'MyCustomFontTwo';
+    color: white;
+    margin-left: 10px;
+    font-size: calc(1vw + 0.2vh);
+    border: 1px solid white;
+    padding: calc(0.2vw + 0.2vh) calc(1vw + 1vh);
+    border-radius: 0.625rem;
+    cursor: pointer;
+}
+
+.btw:hover {
+    background-color: #012733;
+}

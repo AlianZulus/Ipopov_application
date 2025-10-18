@@ -1,0 +1,70 @@
+
+.container {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #000000;
+    color: #EEE;
+    width: 100%;
+    font-weight: bold;
+    padding: calc(0.5vh + 10px) 0;
+}
+
+
+.logo {
+    flex: 0 0 auto;
+    width: calc(2.5% + 2px);
+    max-width: calc(3.5% + 2px);
+    height: auto;
+    padding: calc(0.1vh + 3px);
+    border-radius: 50%;
+}
+
+.menuContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(0.5vw + 5px);
+    flex: 1 1 auto;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.list {
+    position: relative;
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 calc(0.5vw + 10px);
+    white-space: nowrap;
+}
+
+.list:hover {
+    color: #309797;
+}
+
+.cartBadge {
+    position: absolute;
+    top: -30%;
+    left: 60%;
+    color: black;
+    font-size: clamp(10px, 1vw, 16px);
+    border-radius: 50%;
+    background-color: #EEE;
+    padding: 2px 6px;
+}
+.basketNumber{
+ position: absolute;
+    top: -30%;
+    left: 60%;
+    color: black;
+    font-size: 0.9vw;
+    border-radius: 40px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+

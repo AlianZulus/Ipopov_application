@@ -1,0 +1,486 @@
+.containerTwo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    animation: fadeIn 0.5s ease;
+}
+
+
+
+.container {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 0;
+    z-index: 20;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+
+}
+
+.container.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal {
+    background-color: #cdc9c9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: clamp(400px, 16vw, 480px);
+    border-radius: 8px;
+    height: 100%;
+    color: black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.modal.active {
+    transform: translateX(0);
+}
+
+.modalTwo {
+    padding: 20px;
+    color: black;
+    width: 50%;
+    max-width: 600px;
+    height: 50%;
+    max-height: 80%;
+    position: relative;
+    display: flex;
+    border-radius: 40px;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateX(100%);
+    animation: slideIn 0.5s ease forwards;
+}
+
+.containerThree {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    animation: fadeIn 0.5s ease;
+}
+
+.modalThree {
+    padding: 40px;
+    color: #333;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    border-radius: 20px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.6s ease;
+    text-align: center;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.checkmarkContainer {
+    width: 80px;
+    height: 80px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    animation: bounce 0.8s ease;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.checkmark {
+    width: 40px;
+    height: 20px;
+    border-left: 5px solid white;
+    border-bottom: 5px solid white;
+    transform: rotate(-45deg);
+    animation: checkmarkDraw 0.6s ease;
+}
+
+@keyframes checkmarkDraw {
+    from {
+        stroke-dasharray: 0, 100%;
+    }
+    to {
+        stroke-dasharray: 100%, 100%;
+    }
+}
+
+.thankYouText {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.parkingInfo {
+    font-size: 18px;
+    color: #555;
+}
+
+.highlight {
+    color: #ff5722;
+    font-weight: bold;
+}
+
+
+.header {
+    font-size: 1.5rem;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+.cartItemsContainer {
+    flex: 1;
+    overflow-y: auto;
+    width: 100%;
+}
+
+
+.cartItem {
+    border-bottom: 1px solid #ccc;
+    background-color: #EEE;
+    display: flex;
+    flex-direction: column;
+    min-height: 120px;
+    justify-content: center;
+}
+
+.itemContent {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.itemDetails {
+    flex: 1;
+    width: 80%;
+}
+
+.title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.quantityInfo {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+.priceOrDelete {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.price {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    transform: rotate(90deg);
+}
+
+.deleteIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cartItem:hover .price {
+    opacity: 0;
+}
+
+.cartItem:hover .deleteIcon {
+    opacity: 1;
+}
+
+
+.binocularSection {
+    background-color: white;
+    width: 100%;
+
+}
+
+.binocularTitle {
+    font-size: 18px;
+    margin-left: 10px;
+    font-weight: bold;
+    margin-right: 10px;
+
+}
+
+.add {
+    transition: transform 1.6s ease;
+}
+
+.add:hover {
+    color: #1f6161;
+}
+
+.accordionContent {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.accordionContent.open {
+    max-height: 500px;
+    opacity: 1;
+}
+
+
+.binocularOptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.binocularOption {
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.binocularOption.selected {
+    background-color: #EEE;
+}
+
+.binocularOption:not(.selected) {
+    background-color: #fffdfd;
+}
+
+
+.total {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.btwTotal {
+    padding: 10px;
+    background-color: #1f6161;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.btwTotal:hover {
+    background-color: #1b5555;
+}
+
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
+.emptyCart {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.emptyImage {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+
+.emptyText {
+    font-family: 'MyCustomFont';
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    font-weight: 200;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.choiceRow {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 5px;
+}
+
+.choiceLabel {
+    width: 110%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.containerBtwChoice {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+
+.btwChoice {
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 20px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #2a9d8f;
+    border: solid 2px white;
+    color: white;
+}
+
+.btwChoice:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.btwChoice:hover {
+    background-color: #228176;
+    transform: scale(1.05);
+
+}
+
+.btwChoice::before {
+    font-size: 14px;
+    color: white;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 110px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 75%;
+    left: -185%;
+    margin-left: -40px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+}
+
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.75) transparent transparent transparent;
+}
+
+
+.reserveButton {
+    padding: 10px 20px;
+    background-color: #228176;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+.reserveButton:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.reserveButton:hover {
+    background-color: #1a655c;
+
+}
+
+.btwChoice:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.count {
+    text-align: center;
+    width: 20px;
+}
