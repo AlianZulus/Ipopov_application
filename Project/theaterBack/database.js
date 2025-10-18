@@ -28,12 +28,12 @@ CREATE TABLE IF NOT EXISTS spectacles (
     id INTEGER PRIMARY KEY,
     icons TEXT,
     age TEXT,
-    hall TEXT,          -- JSON со схемой зала (каждый seat: {row, seatNumber, reserved, ...})
-    dates TEXT,         -- JSON с массивом дат
-    adress TEXT,        -- JSON с адресом или чем-то похожим
+    hall TEXT,
+    dates TEXT,
+    adress TEXT,
     title TEXT,
     comment TEXT,
-    reservedSeats TEXT  -- JSON-объект вида { "2025-01-10": [{row, seatNumber}, ...], ... }
+    reservedSeats TEXT
 );
 `);
 
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS spectacles (
 db.prepare(`
   CREATE TABLE IF NOT EXISTS reservations (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    date TEXT NOT NULL,       -- 'YYYY-MM-DD'
+    date TEXT NOT NULL,
     tableId INTEGER NOT NULL,
     isReserved INTEGER NOT NULL DEFAULT 1
   )
