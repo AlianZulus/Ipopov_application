@@ -368,7 +368,7 @@ export const AddCart = ({
                         {}
                         {cart.length > 0 && (
                             <div className={styles.binocularSection}>
-                                {"alianzulus8@gmail.com"}
+                                {"teatr@culture.mos.ru"}
 
                                 <div onClick={changeOpenMenuDop} style={{
                                     padding: 10,
